@@ -1,0 +1,119 @@
+{
+  "brand": {
+    "name": "Maekkeuleoun",
+    "tagline": "Gentle Care. Real Glow.",
+    "description": "Premium skincare crafted with clean, gentle ingredients that actually work. Because your skin isn't a laboratory, and you aren't a test subject.",
+    "shopee": "https://shopee.ph/maekkeuleoun",
+    "lazada": "https://lazada.com.ph/shop/maekkeuleoun",
+    "facebook": "https://www.facebook.com/share/18qxVFn8yB/",
+    "phone": "+63 917 775 0610"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Bel Soap",
+      "slug": "bel-soap",
+      "category": "For Her",
+      "tagline": "Soft. Nourished. Happy Skin.",
+      "short_description": "Cleanse without that tight, stripped feeling — just soft, nourished, happy skin after every bath.",
+      "description": "Maekkeuleoun Bel Soap helps soothe skin, prevent acne, minimize breakouts, hydrate deeply, and reduce signs of aging — all in one bar. Because healthy skin starts with the right cleanse.",
+      "benefits": [
+        "Soothes sensitive skin",
+        "Prevents acne & breakouts",
+        "Deep hydration",
+        "Reduces signs of aging",
+        "Gentle daily cleanser"
+      ],
+      "hashtags": ["#GentleButEffective", "#GlowNaturally", "#SkinCareEssentials", "#FreshSkin", "#BelSoap"],
+      "image": "assets/images/bel-soap-1.jpeg",
+      "images": ["assets/images/bel-soap-1.jpeg", "assets/images/bel-soap-2.jpeg", "assets/images/bel-soap-3.jpeg"],
+      "links": {
+        "shopee": "https://bit.ly/MaekkeuleounBel-shopee",
+        "lazada": "https://bit.ly/MaekkeuleounBel-lazada"
+      },
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Bo Soap",
+      "slug": "bo-soap",
+      "category": "For Him",
+      "tagline": "Clean Confidence. Every Day.",
+      "short_description": "Deep clean without the damage. Gentle on skin, tough on dirt.",
+      "description": "Don't let harsh chemicals steal your glow. Maekkeuleoun Bo is specially formulated for men who want a deep clean without the damage. Protect your skin today for a better glow tomorrow.",
+      "benefits": [
+        "Deep cleansing formula",
+        "Gentle on skin",
+        "Fights odor & bacteria",
+        "Preserves natural moisture",
+        "Built for active men"
+      ],
+      "hashtags": ["#SkincareForMen", "#GlowUp", "#GentleCleansing", "#MensGrooming", "#HealthySkin"],
+      "image": "assets/images/bo-soap-1.jpeg",
+      "images": ["assets/images/bo-soap-1.jpeg", "assets/images/bo-soap-2.jpeg", "assets/images/bo-soap-gift.jpeg"],
+      "links": {
+        "shopee": "https://bit.ly/MaekkeuleounBo-shopee",
+        "lazada": "https://bit.ly/MaekkeuleounBo-lazada"
+      },
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Maekkeuleoun Gift Set",
+      "slug": "gift-set",
+      "category": "Gift Sets",
+      "tagline": "The Perfect Gift of Glow.",
+      "short_description": "Quality, style, and care in one beautifully curated set — the ideal gift for someone special.",
+      "description": "Choosing the perfect gift means choosing quality, style, and care. The Maekkeuleoun Gift Set embodies all three, making it the ideal gesture to show you truly went the extra mile. Includes our signature Bel and Bo soaps.",
+      "benefits": [
+        "Includes Bel & Bo Soap",
+        "Beautifully packaged",
+        "Perfect for gifting",
+        "Premium quality",
+        "For him & her"
+      ],
+      "hashtags": ["#ChooseQuality", "#PerfectGift", "#MaekkeuleounGiftSet", "#ExtraMileGifting"],
+      "image": "assets/images/bo-soap-gift.jpeg",
+      "images": ["assets/images/bo-soap-gift.jpeg"],
+      "links": {
+        "shopee": "https://bit.ly/MaekkeuleounGiftSet-shopee",
+        "lazada": "https://bit.ly/MaekkeuleounGiftSet"
+      },
+      "featured": true
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Maria S.",
+      "location": "Manila",
+      "rating": 5,
+      "text": "I switched to Bel Soap two months ago and my skin has never felt this soft. No more dry patches after showering!",
+      "product": "Bel Soap"
+    },
+    {
+      "id": 2,
+      "name": "Jerico T.",
+      "location": "Cebu",
+      "rating": 5,
+      "text": "Finally a soap for men that actually works. Bo Soap gives me that clean feeling without making my skin tight and dry.",
+      "product": "Bo Soap"
+    },
+    {
+      "id": 3,
+      "name": "Lara M.",
+      "location": "Davao",
+      "rating": 5,
+      "text": "Ordered the gift set for my boyfriend and he loves it! Beautiful packaging, amazing quality. Will definitely reorder.",
+      "product": "Gift Set"
+    },
+    {
+      "id": 4,
+      "name": "Paolo R.",
+      "location": "Quezon City",
+      "rating": 5,
+      "text": "My acne has improved so much since I started using Bel Soap. Gentle yet effective — exactly what my sensitive skin needed.",
+      "product": "Bel Soap"
+    }
+  ]
+}

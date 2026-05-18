@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Maekkeuleoun</title>
+  <meta name="description" content="Get in touch with Maekkeuleoun. Find us on Shopee, Lazada, and Facebook, or send us a message directly." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Contact page extras ──────────────────────────── */
+    .contact-page { padding-top: var(--nav-h); }
+
+    /* Page Hero */
+    .contact-page-hero {
+      padding: 5rem 0 4.5rem;
+      background: linear-gradient(155deg, var(--charcoal) 0%, #3d2510 55%, var(--rose-deep) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-page-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,169,110,0.12), transparent 65%);
+      pointer-events: none;
+    }
+
+    .contact-page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,112,96,0.15), transparent 65%);
+      pointer-events: none;
+    }
+
+    .contact-page-hero .section-eyebrow { color: var(--gold-light); }
+
+    .contact-page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .contact-page-hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .contact-page-hero p {
+      color: rgba(255,255,255,0.65);
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    /* ── Main contact layout ────────────────────────── */
+    .contact-main {
+      padding: 7rem 0;
+      background: var(--warm-white);
+    }
+
+    .contact-main .container {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    /* ── Left: Info panel ───────────────────────────── */
+    .contact-info-panel h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .contact-info-panel h2 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .contact-info-panel > p {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Detail items */
+    .contact-details { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2.5rem; }
+
+    .c-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 1.2rem;
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .c-detail:hover {
+      border-left-color: var(--rose);
+      transform: translateX(4px);
+    }
+
+    .c-detail-icon {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blush), var(--cream-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .c-detail-body strong {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .c-detail-body a,
+    .c-detail-body p {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      transition: color 0.3s;
+      margin: 0;
+    }
+
+    .c-detail-body a:hover { color: var(--rose); }
+
+    /* Social buttons */
+    .contact-socials-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+
+    .s-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-xl);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+    }
+
+    .s-btn-facebook { background: #1877f2; color: #fff; }
+    .s-btn-facebook:hover { background: #0f5fcf; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(24,119,242,0.35); }
+
+    .s-btn-shopee { background: #ee4d2d; color: #fff; }
+    .s-btn-shopee:hover { background: #d43f21; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(238,77,45,0.35); }
+
+    .s-btn-lazada { background: #0f146b; color: #fff; }
+    .s-btn-lazada:hover { background: #0a0e52; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,20,107,0.35); }
+
+    /* ── Response time note ─────────────────────────── */
+    .response-note {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.2rem;
+      background: rgba(184,112,96,0.08);
+      border: 1px solid rgba(184,112,96,0.2);
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      color: var(--text-mid);
+    }
+
+    .response-note span:first-child { font-size: 1.2rem; }
+
+    /* ── Right: Form panel ──────────────────────────── */
+    .contact-form-panel {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 3rem 3rem 3.5rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .contact-form-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(to right, var(--rose), var(--blush), var(--gold));
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .form-header { margin-bottom: 2.2rem; }
+
+    .form-header h3 {
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-header p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .contact-form .form-group { margin-bottom: 1.15rem; }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 0.42rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      border: 1.5px solid var(--blush);
+      border-radius: var(--radius-sm);
+      background: var(--warm-white);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      transition: border-color 0.3s, box-shadow 0.3s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--text-light);
+      font-size: 0.85rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--rose);
+      box-shadow: 0 0 0 3px rgba(184,112,96,0.12);
+    }
+
+    .contact-form textarea { min-height: 130px; resize: vertical; }
+
+    /* Select arrow */
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '▾';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+      pointer-events: none;
+      font-size: 0.85rem;
+    }
+
+    /* Checkbox */
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-check input[type="checkbox"] {
+      width: 18px; height: 18px;
+      min-width: 18px;
+      border: 1.5px solid var(--blush);
+      border-radius: 3px;
+      background: var(--warm-white);
+      appearance: auto;
+      -webkit-appearance: auto;
+      accent-color: var(--rose);
+      margin-top: 2px;
+      padding: 0;
+    }
+
+    .form-check label {
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 400;
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    .form-check label a { color: var(--rose); }
+    .form-check label a:hover { text-decoration: underline; }
+
+    .btn-submit {
+      width: 100%;
+      justify-content: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+
+    /* Success state */
+    .form-success-state {
+      display: none;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .form-success-state.visible { display: block; }
+
+    .success-circle {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rose), var(--blush));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .form-success-state h4 {
+      font-size: 1.7rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success-state p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* ── FAQ section ────────────────────────────────── */
+    .faq-section {
+      padding: 7rem 0;
+      background: var(--cream-dark);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 0;
+    }
+
+    .faq-item {
+      background: var(--warm-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.3s;
+    }
+
+    .faq-item:hover { box-shadow: var(--shadow-md); }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.35rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      gap: 1rem;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover { color: var(--rose); }
+
+    .faq-icon {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--cream-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.3s;
+      line-height: 1;
+      color: var(--rose);
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--rose); color: #fff; }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      padding-bottom: 1.35rem;
+    }
+
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    /* ── Map / Location stub ───────────────────────── */
+    .find-us {
+      padding: 6rem 0;
+      background: var(--warm-white);
+      text-align: center;
+    }
+
+    .stores-row {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .store-detail-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      min-width: 260px;
+      max-width: 300px;
+      flex: 1;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .store-detail-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+
+    .store-detail-card .store-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .store-detail-card h4 {
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .store-detail-card p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .store-detail-card .btn {
+      font-size: 0.75rem;
+      padding: 0.6rem 1.4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .contact-main .container { grid-template-columns: 1fr; gap: 3.5rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .contact-form-panel { padding: 2rem 1.5rem 2.5rem; }
+      .contact-form .form-row { grid-template-columns: 1fr; }
+      .stores-row { flex-direction: column; align-items: center; }
+      .store-detail-card { min-width: 280px; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo/logo.jpeg" alt="Maekkeuleoun Logo" class="logo-img" />
+        <span class="logo-text">Maekkeuleoun</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="https://shopee.ph/maekkeuleoun" target="_blank" class="nav-cta">Shop Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <main class="contact-page">
+
+    <!-- ════════════════ PAGE HERO ════════════════ -->
+    <section class="contact-page-hero">
+      <p class="section-eyebrow reveal">Say Hello</p>
+      <h1 class="reveal delay-1">We'd love to<br /><em>hear from you.</em></h1>
+      <p class="reveal delay-2">
+        Have a question about our products? Want to share your glow story?
+        We're always happy to connect.
+      </p>
+    </section>
+
+    <!-- ════════════════ MAIN CONTACT ════════════════ -->
+    <section class="contact-main">
+      <div class="container">
+
+        <!-- LEFT: Info -->
+        <div class="contact-info-panel scroll-reveal-left">
+          <p class="section-eyebrow">Get in Touch</p>
+          <h2>Let's start a<br /><em>conversation.</em></h2>
+          <p>
+            Whether you have a product question, want to know more about our
+            ingredients, or just want to say hi — we're here. Reach out through
+            any channel that's most convenient for you.
+          </p>
+
+          <div class="contact-details">
+            <div class="c-detail">
+              <div class="c-detail-icon">📞</div>
+              <div class="c-detail-body">
+                <strong>Phone / Viber / WhatsApp</strong>
+                <a href="tel:+639177750610">+63 917 775 0610</a>
+              </div>
+            </div>
+
+            <div class="c-detail">
+              <div class="c-detail-icon">📘</div>
+              <div class="c-detail-body">
+                <strong>Facebook Page</strong>
+                <a href="https://www.facebook.com/share/18qxVFn8yB/" target="_blank">
+                  facebook.com/Maekkeuleoun
+                </a>
+              </div>
+            </div>
+
+            <div class="c-detail">
+              <div class="c-detail-icon">🛒</div>
+              <div class="c-detail-body">
+                <strong>Shopee Store</strong>
+                <a href="https://shopee.ph/maekkeuleoun" target="_blank">
+                  shopee.ph/maekkeuleoun
+                </a>
+              </div>
+            </div>
+
+            <div class="c-detail">
+              <div class="c-detail-icon">🏬</div>
+              <div class="c-detail-body">
+                <strong>Lazada Store</strong>
+                <a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank">
+                  lazada.com.ph/shop/maekkeuleoun
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials-row">
+            <a href="https://www.facebook.com/share/18qxVFn8yB/" target="_blank" class="s-btn s-btn-facebook">
+              <span>f</span> Facebook
+            </a>
+            <a href="https://shopee.ph/maekkeuleoun" target="_blank" class="s-btn s-btn-shopee">
+              🛒 Shopee
+            </a>
+            <a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank" class="s-btn s-btn-lazada">
+              🏬 Lazada
+            </a>
+          </div>
+
+          <div class="response-note">
+            <span>⏱️</span>
+            <span>We typically respond within <strong>24 hours</strong>. You can also message us directly via Shopee or Lazada chat.</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form-panel scroll-reveal-right">
+
+          <!-- Form -->
+          <div id="contactFormWrap">
+            <div class="form-header">
+              <h3>Send us a message</h3>
+              <p>Fill in your details below and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Maria"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Santos"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="maria@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number (optional)</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+63 9XX XXX XXXX"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <div class="select-wrap">
+                  <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select a topic…</option>
+                    <option value="product-inquiry">Product Inquiry</option>
+                    <option value="order-tracking">Order Tracking</option>
+                    <option value="wholesale">Wholesale / Bulk Orders</option>
+                    <option value="feedback">Share My Experience</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us how we can help you…"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" id="consent" name="consent" required />
+                <label for="consent">
+                  I agree to be contacted by Maekkeuleoun regarding my inquiry.
+                  We respect your privacy and will never share your information.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                Send Message →
+              </button>
+            </form>
+          </div>
+
+          <!-- Success state -->
+          <div class="form-success-state" id="formSuccess">
+            <div class="success-circle">✓</div>
+            <h4>Message Sent!</h4>
+            <p>
+              Thank you for reaching out. We've received your message and will
+              get back to you within 24 hours. In the meantime, feel free to
+              browse our store on Shopee or Lazada.
+            </p>
+            <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+              <a href="https://shopee.ph/maekkeuleoun" target="_blank" class="btn btn-shopee">Shop on Shopee</a>
+              <a href="products.html" class="btn btn-outline">View Products</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ FAQ ════════════════ -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Support</p>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Quick answers to the questions we hear most often.</p>
+        </div>
+
+        <div class="faq-grid">
+
+          <div class="faq-item scroll-reveal">
+            <button class="faq-question">
+              Where can I buy Maekkeuleoun products?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>You can shop our full collection on <a href="https://shopee.ph/maekkeuleoun" target="_blank" style="color:var(--rose);">Shopee</a> and <a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank" style="color:var(--rose);">Lazada</a>. Both platforms offer nationwide delivery across the Philippines.</p>
+            </div>
+          </div>
+
+          <div class="faq-item scroll-reveal">
+            <button class="faq-question">
+              Is Bel Soap suitable for sensitive skin?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Bel Soap is formulated specifically to be gentle on sensitive skin. It soothes irritation, hydrates deeply, and cleanses without stripping your skin's natural moisture barrier.</p>
+            </div>
+          </div>
+
+          <div class="faq-item scroll-reveal">
+            <button class="faq-question">
+              Can men use Bel Soap too?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. While Bel Soap is marketed for her and Bo Soap for him, both soaps are gentle enough for any skin type. We recommend Bo Soap for men who prefer a deeper cleanse.</p>
+            </div>
+          </div>
+
+          <div class="faq-item scroll-reveal">
+            <button class="faq-question">
+              What's included in the Gift Set?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The Maekkeuleoun Gift Set includes our signature Bel Soap and Bo Soap, beautifully packaged — making it the perfect gift for couples, friends, or family on any occasion.</p>
+            </div>
+          </div>
+
+          <div class="faq-item scroll-reveal">
+            <button class="faq-question">
+              How long does one bar of soap last?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>With regular daily use, one bar typically lasts 3–4 weeks. To extend its life, keep it in a dry soap dish between uses and avoid leaving it in standing water.</p>
+            </div>
+          </div>
+
+          <div class="faq-item scroll-reveal">
+            <button class="faq-question">
+              Do you offer bulk or wholesale orders?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! For bulk and wholesale inquiries, please use the contact form above or reach out to us directly via phone or Facebook. We'd love to discuss how we can work together.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ FIND US ════════════════ -->
+    <section class="find-us">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Shop Online</p>
+          <h2 class="section-title">Find Us On Your Favorite Platform</h2>
+          <p class="section-subtitle">Fast delivery anywhere in the Philippines.</p>
+        </div>
+
+        <div class="stores-row">
+          <div class="store-detail-card scroll-reveal">
+            <div class="store-icon">🛒</div>
+            <h4>Shopee</h4>
+            <p>shopee.ph/maekkeuleoun</p>
+            <a href="https://shopee.ph/maekkeuleoun" target="_blank" class="btn btn-shopee">Open Store</a>
+          </div>
+
+          <div class="store-detail-card scroll-reveal">
+            <div class="store-icon">🏬</div>
+            <h4>Lazada</h4>
+            <p>lazada.com.ph/shop/maekkeuleoun</p>
+            <a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank" class="btn btn-lazada">Open Store</a>
+          </div>
+
+          <div class="store-detail-card scroll-reveal">
+            <div class="store-icon">📘</div>
+            <h4>Facebook</h4>
+            <p>Message us directly on our page</p>
+            <a href="https://www.facebook.com/share/18qxVFn8yB/" target="_blank" class="btn btn-primary">Open Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo/logo.jpeg" alt="Maekkeuleoun" class="footer-logo" />
+        <p class="footer-brand-name">Maekkeuleoun</p>
+        <p class="footer-tagline">Gentle Care. Real Glow.</p>
+        <p class="footer-desc">Premium Philippine skincare crafted with clean, gentle ingredients that love your skin back.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-products">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="https://bit.ly/MaekkeuleounBel-shopee" target="_blank">Bel Soap</a></li>
+          <li><a href="https://bit.ly/MaekkeuleounBo-shopee" target="_blank">Bo Soap</a></li>
+          <li><a href="https://bit.ly/MaekkeuleounGiftSet-shopee" target="_blank">Gift Set</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="tel:+639177750610">+63 917 775 0610</a></li>
+          <li><a href="https://www.facebook.com/share/18qxVFn8yB/" target="_blank">Facebook</a></li>
+          <li><a href="https://shopee.ph/maekkeuleoun" target="_blank">Shopee Store</a></li>
+          <li><a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank">Lazada Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Maekkeuleoun. All rights reserved.</p>
+      <p class="footer-hashtags">#GentleButEffective #GlowNaturally #Maekkeuleoun</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ── Contact form validation & submit ──────────────
+    document.getElementById('navbar').classList.add('scrolled');
+
+    const form      = document.getElementById('contactForm');
+    const wrap      = document.getElementById('contactFormWrap');
+    const success   = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const firstName = form.firstName.value.trim();
+      const email     = form.email.value.trim();
+      const subject   = form.subject.value;
+      const message   = form.message.value.trim();
+      const consent   = form.consent.checked;
+
+      if (!firstName || !email || !subject || !message || !consent) {
+        // Highlight empty required fields
+        [form.firstName, form.email, form.subject, form.message].forEach(field => {
+          if (!field.value.trim()) {
+            field.style.borderColor = 'var(--rose)';
+            field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
+          }
+        });
+        return;
+      }
+
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled    = true;
+      submitBtn.style.opacity = '0.7';
+
+      setTimeout(() => {
+        wrap.style.opacity    = '0';
+        wrap.style.transition = 'opacity 0.3s';
+        setTimeout(() => {
+          wrap.style.display = 'none';
+          success.classList.add('visible');
+        }, 300);
+      }, 1600);
+    });
+
+    // ── FAQ accordion ─────────────────────────────────
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item    = btn.closest('.faq-item');
+        const isOpen  = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+
+        // Toggle clicked
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
