@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maekkeuleoun — Gentle Care. Real Glow.</title>
+  <meta name="description" content="Premium skincare crafted with clean, gentle ingredients. Discover Bel Soap, Bo Soap, and our curated Gift Sets." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo/logo.jpeg" alt="Maekkeuleoun Logo" class="logo-img" />
+        <span class="logo-text">Maekkeuleoun</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://shopee.ph/maekkeuleoun" target="_blank" class="nav-cta">Shop Now</a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══════════════════════════════════ HERO ════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img src="assets/images/hero.jpeg" alt="Maekkeuleoun Hero" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Premium Philippine Skincare</p>
+      <h1 class="hero-title reveal delay-1">
+        Gentle Care.<br /><em>Real Glow.</em>
+      </h1>
+      <p class="hero-subtitle reveal delay-2">
+        Clean ingredients. Soft skin. No compromises.
+      </p>
+      <div class="hero-actions reveal delay-3">
+        <a href="products.html" class="btn btn-primary">Explore Products</a>
+        <a href="https://shopee.ph/maekkeuleoun" target="_blank" class="btn btn-ghost">Shop on Shopee</a>
+      </div>
+    </div>
+    <a href="#featured" class="hero-scroll" aria-label="Scroll down">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════ MARQUEE ═══════════════════════════════════ -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>Gentle But Effective</span>
+      <span class="marquee-dot">✦</span>
+      <span>Glow Naturally</span>
+      <span class="marquee-dot">✦</span>
+      <span>Clean Ingredients</span>
+      <span class="marquee-dot">✦</span>
+      <span>Soft & Nourished</span>
+      <span class="marquee-dot">✦</span>
+      <span>Authentic Skincare</span>
+      <span class="marquee-dot">✦</span>
+      <span>For Him & Her</span>
+      <span class="marquee-dot">✦</span>
+      <span>Gentle But Effective</span>
+      <span class="marquee-dot">✦</span>
+      <span>Glow Naturally</span>
+      <span class="marquee-dot">✦</span>
+      <span>Clean Ingredients</span>
+      <span class="marquee-dot">✦</span>
+      <span>Soft & Nourished</span>
+      <span class="marquee-dot">✦</span>
+      <span>Authentic Skincare</span>
+      <span class="marquee-dot">✦</span>
+      <span>For Him & Her</span>
+      <span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ FEATURED PRODUCTS ════════════════════════ -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Collection</p>
+        <h2 class="section-title">Crafted for Your Skin</h2>
+        <p class="section-subtitle">Three essentials. Infinite confidence.</p>
+      </div>
+
+      <div class="product-grid" id="featuredGrid">
+        <!-- Loaded by JS from products.json -->
+      </div>
+
+      <div class="section-cta">
+        <a href="products.html" class="btn btn-outline">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ BRAND STORY SPLIT ══════════════════════════ -->
+  <section class="brand-split">
+    <div class="brand-split-image">
+      <img src="assets/images/brand-story.jpeg" alt="Maekkeuleoun Brand Story" />
+      <div class="brand-split-badge">
+        <span class="badge-icon">🌿</span>
+        <span>Clean &amp; Natural</span>
+      </div>
+    </div>
+    <div class="brand-split-content">
+      <p class="section-eyebrow">Our Philosophy</p>
+      <h2 class="split-title">Your skin isn't a laboratory.<br /><em>And you aren't a test subject.</em></h2>
+      <p class="split-text">
+        Stop the cycle of irritation and breakouts from harsh chemicals.
+        Maekkeuleoun brings you back to basics with clean, gentle ingredients
+        that actually work. Whether you're a man or a woman, your face deserves care — not a chemistry project.
+      </p>
+      <ul class="split-features">
+        <li><span class="feat-icon">✦</span> No harsh sulfates</li>
+        <li><span class="feat-icon">✦</span> Gentle daily use</li>
+        <li><span class="feat-icon">✦</span> For all skin types</li>
+        <li><span class="feat-icon">✦</span> Authentic ingredients</li>
+      </ul>
+      <a href="about.html" class="btn btn-primary">Our Story</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ GALLERY ═══════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Gallery</p>
+        <h2 class="section-title">Feel the Difference</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="assets/images/bel-soap-2.jpeg" alt="Bel Soap" loading="lazy" />
+          <div class="gallery-caption">Bel Soap — For Her</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/bo-soap-2.jpeg" alt="Bo Soap" loading="lazy" />
+          <div class="gallery-caption">Bo Soap — For Him</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery-1.jpeg" alt="Maekkeuleoun" loading="lazy" />
+          <div class="gallery-caption">Natural Glow</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/bo-soap-gift.jpeg" alt="Gift Set" loading="lazy" />
+          <div class="gallery-caption">Gift Set</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/avocado.jpeg" alt="Natural Ingredients" loading="lazy" />
+          <div class="gallery-caption">Natural Ingredients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Real Reviews</p>
+        <h2 class="section-title">What Our Community Says</h2>
+      </div>
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <!-- Loaded by JS -->
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ SHOPS BANNER ═══════════════════════════════ -->
+  <section class="shops-banner">
+    <div class="container">
+      <h2 class="shops-title">Available On Your Favorite Platforms</h2>
+      <div class="shops-grid">
+        <a href="https://shopee.ph/maekkeuleoun" target="_blank" class="shop-card shopee">
+          <div class="shop-icon">🛒</div>
+          <div class="shop-name">Shopee</div>
+          <div class="shop-url">shopee.ph/maekkeuleoun</div>
+          <span class="shop-arrow">→</span>
+        </a>
+        <a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank" class="shop-card lazada">
+          <div class="shop-icon">🏬</div>
+          <div class="shop-name">Lazada</div>
+          <div class="shop-url">lazada.com.ph/shop/maekkeuleoun</div>
+          <span class="shop-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo/logo.jpeg" alt="Maekkeuleoun" class="footer-logo" />
+        <p class="footer-brand-name">Maekkeuleoun</p>
+        <p class="footer-tagline">Gentle Care. Real Glow.</p>
+        <p class="footer-desc">Premium Philippine skincare crafted with clean, gentle ingredients that love your skin back.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-products">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="https://bit.ly/MaekkeuleounBel-shopee" target="_blank">Bel Soap</a></li>
+          <li><a href="https://bit.ly/MaekkeuleounBo-shopee" target="_blank">Bo Soap</a></li>
+          <li><a href="https://bit.ly/MaekkeuleounGiftSet-shopee" target="_blank">Gift Set</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="tel:+639177750610">+63 917 775 0610</a></li>
+          <li><a href="https://www.facebook.com/share/18qxVFn8yB/" target="_blank">Facebook</a></li>
+          <li><a href="https://shopee.ph/maekkeuleoun" target="_blank">Shopee Store</a></li>
+          <li><a href="https://lazada.com.ph/shop/maekkeuleoun" target="_blank">Lazada Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Maekkeuleoun. All rights reserved.</p>
+      <p class="footer-hashtags">#GentleButEffective #GlowNaturally #Maekkeuleoun</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
